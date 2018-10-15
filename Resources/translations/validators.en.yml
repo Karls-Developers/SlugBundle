@@ -1,0 +1,2 @@
+slug_still_exists: 'Value for Field "%source%" with the value "%value%" still exists please change the Value.'
+slug_source_not_exists: 'Slug source does not exists.'

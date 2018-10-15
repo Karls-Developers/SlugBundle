@@ -1,0 +1,2 @@
+slug_still_exists: 'Der Wert "%value%" für das Feld "%source%" existiert schon. Bitte geben Sie einen anderen Wert ein.'
+slug_source_not_exists: 'Es konnte kein Referenz-Feld für das Slug-Feld gefunden werden.'

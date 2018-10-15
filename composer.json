@@ -1,0 +1,20 @@
+{
+    "name": "karls/slug-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a slug Field for Unite-Cms.",
+    "require": {
+        "unite-cms/core-bundle": "^0.6"
+    },
+    "autoload": {
+        "psr-4": { "Karls\\SlugBundle\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Christian Roessler",
+            "email": "roessler@karls.de"
+        }
+    ]
+}

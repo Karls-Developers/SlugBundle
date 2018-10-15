@@ -1,0 +1,8 @@
+services:
+  # A slug field
+  Karls\SlugBundle\Field\Types\SlugFieldType:
+    arguments: ['@doctrine.orm.entity_manager', '@service_container']
+    tags: [unite_cms.field_type]
+
+  Karls\SlugBundle\SchemaType\Types\Input\SlugFieldInputType:
+    tags: [unite_cms.graphql.schema_type]
