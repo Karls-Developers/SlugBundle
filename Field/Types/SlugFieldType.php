@@ -148,15 +148,17 @@ class SlugFieldType extends FieldType
             ->where("JSON_EXTRACT(c.data, :jsonPath) = :value ")
             ->andWhere("c.contentType = :contentType ")
             ->andWhere("c.locale = 'de'")
-            ->andWhere("c.id != :currentContentId")
             ->setParameter('jsonPath', '$.slug')
             ->setParameter('value', $slug)
-            ->setParameter('contentType', $contentType->getId())
-            ->setParameter('currentContentId', $context->getObject()->getId())
-            ->setMaxResults(1)
-            ->getQuery();
+            ->setParameter('contentType', $contentType->getId());
+        if($context->getObject()) {
+            $query
+                ->andWhere("c.id != :currentContentId")
+                ->setParameter('currentContentId', $context->getObject()->getId());
+        }
+        $query->setMaxResults(1);
 
-        $content = $query->getResult();
+        $content = $query->getQuery()->getResult();
 
         if(count($content)) {
 
