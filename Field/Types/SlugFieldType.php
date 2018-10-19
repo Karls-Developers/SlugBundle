@@ -151,10 +151,10 @@ class SlugFieldType extends FieldType
             ->setParameter('jsonPath', '$.slug')
             ->setParameter('value', $slug)
             ->setParameter('contentType', $contentType->getId());
-        if($context->getObject()) {
+        if($currentObject = $context->getObject()) {
             $query
                 ->andWhere("c.id != :currentContentId")
-                ->setParameter('currentContentId', $context->getObject()->getId());
+                ->setParameter('currentContentId', $currentObject->getId());
         }
         $query->setMaxResults(1);
 
