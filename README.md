@@ -26,9 +26,7 @@ Karls\SlugBundle\KarlsSlugBundle::class => ['all' => true],
 {
   "type": "slug",
   "settings": {
-    "bucket": {
-      "source": "title"
-    }
+    "source": "title"
   }
 }
 ```
