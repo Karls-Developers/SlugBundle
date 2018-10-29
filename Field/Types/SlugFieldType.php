@@ -128,7 +128,7 @@ class SlugFieldType extends FieldType
      * {@inheritdoc}
      */
     function validateData(FieldableField $field, $data, ExecutionContextInterface $context) {
-        if (empty($data)) {
+        if (empty($data) || !count($context->getValue()) || !$this->settings['source']) {
             return;
         }
 
