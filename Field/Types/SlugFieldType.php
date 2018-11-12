@@ -82,7 +82,7 @@ class SlugFieldType extends FieldType
     /**
      * {@inheritdoc}
      */
-    function resolveGraphQLData(FieldableField $field, $value)
+    function resolveGraphQLData(FieldableField $field, $value, FieldableContent $content)
     {
         // return NULL on empty value
         if (empty($value))
