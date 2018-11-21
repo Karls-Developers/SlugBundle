@@ -196,17 +196,21 @@ class SlugFieldType extends FieldType
      * {@inheritdoc}
      */
     public function onCreate(FieldableField $field, FieldableContent $content, EntityRepository $repository, &$data) {
-        $data["slug"] = $this->slugify($data[$this->settings['source']]);
-        $content->setData($data);
-        $this->container->get('validator')->validate($content);
+        if(isset($this->settings['source'])) {
+            $data["slug"] = $this->slugify($data[$this->settings['source']]);
+            $content->setData($data);
+            $this->container->get('validator')->validate($content);
+        }
     }
 
     /**
      * {@inheritdoc}
      */
     public function onUpdate(FieldableField $field, FieldableContent $content, EntityRepository $repository, $old_data, &$data) {
-        $data["slug"] = $this->slugify($data[$this->settings['source']]);
-        $content->setData($data);
-        $this->container->get('validator')->validate($content);
+        if(isset($this->settings['source'])) {
+            $data["slug"] = $this->slugify($data[$this->settings['source']]);
+            $content->setData($data);
+            $this->container->get('validator')->validate($content);
+        }
     }
 }
