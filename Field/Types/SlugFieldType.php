@@ -181,6 +181,9 @@ class SlugFieldType extends FieldType
     public static function slugify($text)
     {
         $text = preg_replace('~[^\pL\d]+~u', '-', $text);
+        $text = preg_replace('~[(Ä|ä)]+~u', 'ae', $text);
+        $text = preg_replace('~[(Ü|ü)]+~u', 'ue', $text);
+        $text = preg_replace('~[(Ö|ö)]+~u', 'oe', $text);
         $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
         $text = preg_replace('~[^-\w]+~', '', $text);
         $text = trim($text, '-');
