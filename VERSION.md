@@ -1,3 +1,6 @@
+#Version: 1.0.6
+Updated to new unite cms Version
+
 # Version 1.0.5
 Update onCreate and onUpdate
 
