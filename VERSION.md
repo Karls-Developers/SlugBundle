@@ -1,3 +1,6 @@
+#Version: 1.0.7 
+updated to new unite cms Version
+
 # Version 1.0.6
 ##### Changed umlaut replacement
 
