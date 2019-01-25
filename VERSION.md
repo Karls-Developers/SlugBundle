@@ -1,5 +1,14 @@
-#Version: 1.0.6
-Updated to new unite cms Version
+# Version 1.0.6
+##### Changed umlaut replacement
+
+| Umlaut | Replacement |
+|:------:|:-----------:|
+|    Ä   |      ae     |
+|    ä   |      ae     |
+|    Ö   |      oe     |
+|    ö   |      oe     |
+|    Ü   |      ue     |
+|    ü   |      ue     |
 
 # Version 1.0.5
 Update onCreate and onUpdate
