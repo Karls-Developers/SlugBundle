@@ -1,10 +1,10 @@
 {
     "name": "karls/slug-bundle",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "type": "symfony-bundle",
     "description": "Provides a slug Field for Unite-Cms.",
     "require": {
-        "unite-cms/core-bundle": ">=0.8"
+        "unite-cms/core-bundle": ">=0.9.1"
     },
     "autoload": {
         "psr-4": { "Karls\\SlugBundle\\": "" },
