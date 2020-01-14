@@ -38,6 +38,7 @@ use UniteCMS\CoreBundle\SchemaType\SchemaTypeManager;
 use UniteCMS\CoreBundle\Field\FieldableFieldSettings;
 use Karls\SlugBundle\Form\SlugType;
 use Symfony\Component\DependencyInjection\Container;
+use GraphQL\Type\Definition\ResolveInfo;
 
 class SlugFieldType extends FieldType
 {
